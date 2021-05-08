@@ -1,0 +1,38 @@
+// $primary: #ed0c34;
+// $secondary: #1c1c1c;
+
+// $body-color: $secondary;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1340px,
+  xxxl: 1540px
+);
+
+@mixin list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+@mixin lists {
+   @include list;
+   display: flex;
+}
+
+
+@import "~bootstrap/scss/bootstrap";
+@import "~animate.css/animate.min.css";
+@import "main";
+@import "media";
