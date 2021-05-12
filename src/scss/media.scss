@@ -7,6 +7,22 @@
 @media (max-width: 991px) {
 }
 @media (max-width: 768px) {
+    .home-section .block-1 .logo {
+        margin-top: 100px;
+        max-width: 260px;
+    }
+    .home-section .main-block {
+        height: 50vh;
+    }
+    .home-section .pantera .pantera-svg-item {
+        transform: scale(0.3);
+        transform-origin: bottom right;
+    }
+
+
+    .stars-box {
+        display: none;
+    }
 }
 @media (max-width: 576px) {
     .right-box {

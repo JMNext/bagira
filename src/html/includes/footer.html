@@ -6396,6 +6396,14 @@
         `;
     }
 
+    window.onload = () => {
+        let panteraSvg = panteraSvgItem();
+        if(document.documentElement.clientWidth < 768  && document.getElementById('panteraSvg') === null) {
+            document.getElementById('panteraSvgBox').innerHTML = panteraSvg;
+            document.getElementById('panteraStarBox').classList.add('active');
+            animateElementsDelay();
+        }
+    }
     document.addEventListener('scroll', e => {
         let panteraSvg = panteraSvgItem();
         if (window.scrollY > (document.documentElement.clientHeight / 2) && document.getElementById('panteraSvg') === null) {
