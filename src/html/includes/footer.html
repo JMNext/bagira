@@ -6400,6 +6400,7 @@
         let panteraSvg = panteraSvgItem();
         if (window.scrollY > (document.documentElement.clientHeight / 2) && document.getElementById('panteraSvg') === null) {
             document.getElementById('panteraSvgBox').innerHTML = panteraSvg;
+            document.getElementById('panteraStarBox').classList.add('active');
             animateElementsDelay();
         }
     })

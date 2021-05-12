@@ -6,7 +6,7 @@ body {
   width: 100%;
   height: 200vh;
   background-color: #0a1527;
-  background-image: url('../img//earth-bg-2.jpg');
+  background-image: url('../img/earth-bg-2.jpg');
   // background-image: url('../img//earth-bg.jpg');
   background-size: 100% 200vh;
   overflow: hidden;
@@ -49,9 +49,7 @@ body {
       max-width: 600px;
     }
   }
-  .block-2 {
-    
-  }
+  .block-2 {}
 
   .pantera {
     width: 660px;
@@ -124,6 +122,9 @@ body {
       }
     }
   }
+  @media (max-width: 768px) {
+    background-image: url('../img/earth-bg-2-mobile.jpg');
+  }
 }
 
 .pantera-svg {
@@ -140,7 +141,7 @@ body {
 .pantera-svg .pantera-g path {
   // fill: #F4D371;
   stroke: #F4D371;
-  stroke-width: 2;
+  stroke-width: 1;
   fill: transparent;
   stroke-dasharray: 80;
   stroke-dasharray: 1000;
@@ -220,6 +221,67 @@ body {
 .eye-box {
   display: none;
 }
+.pantera-star-box {
+  width: 77%;
+  height: 87%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 75;
+  opacity: 0;
+  transition: opacity .3s;
+  &.active {
+    opacity: 1;
+    .pantera-star {
+      animation: bounceIn 2s,shadowToggleParth 4s infinite;
+    }
+  }
+}
+.pantera-star {
+  width: 70px;
+  height: 83px;
+  position: absolute;
+  &.star-1 {
+    left: 234px;
+    top: 58px;
+  }
+  &.star-2 {
+    width: 100px;
+    height: 100px;
+    left: 300px;
+    top: -40px;
+  }
+  &.star-3 {
+    width: 100px;
+    height: 100px;
+    left: 302px;
+    top: 150px;
+  }
+  &.star-4 {
+    width: 140px;
+    height: 125px;
+    left: 72px;
+    top: 323px;
+  }
+  &.star-5 {
+    width: 70px;
+    height: 60px;
+    left: 200px;
+    top: 435px;
+  }
+  &.star-6 {
+    width: 80px;
+    height: 80px;
+    left: 300px;
+    top: 455px;
+  }
+  &.star-7 {
+    width: 80px;
+    height: 80px;
+    left: 350px;
+    bottom: 12px;
+  }
+}
 
 @keyframes dash {
   to {
@@ -242,5 +304,17 @@ body {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes shadowToggleParth {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
